@@ -1,0 +1,16 @@
+{
+    "/cordys/*": {
+        "target": "http://192.168.0.150:81",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {"^/target" : ""}
+        },
+        "/home/RandstadNew/*": {
+            "target": "http://192.168.0.150:81",
+            "secure": false,
+            "logLevel": "debug",
+            "changeOrigin": true,
+            "pathRewrite": {"^/target" : ""}
+            }
+}

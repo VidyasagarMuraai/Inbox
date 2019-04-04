@@ -1,0 +1,46 @@
+
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+		<div class="container" fxLayout="row" fxLayoutAlign="center"   class="container-login100">
+			<mat-card  style="width: 400px" >
+                <mat-card-header> 
+                    <div mat-card-avatar class="example-header-image"></div>
+                </mat-card-header>
+                    <div fxLayout="column">
+                    <img mat-card-image style="margin-left:3%;width:90%;height:82px;" src="/assets/images/randstad-g4j.png" alt="Muraai">
+                        <div fxLayoutAlign="center" >
+                            <mat-icon style="font-size:50px;margin-right: 25px">account_box</mat-icon>
+                        </div>
+                        <div class="form-group" fxLayout="column">
+                            <mat-form-field style="margin-top:30px">
+                            <input type="text"  placeholder="Username"  formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" matInput>
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username is required</div>
+                                </div>
+                            </mat-form-field>
+                            
+                        </div>
+                        <div class="form-group" fxLayout="column">
+                            <mat-form-field style="margin-top:20px">
+                                <input type="text"  placeholder="Password"  formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" matInput>
+                             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                </div>
+                             </mat-form-field>
+                            
+                           
+                        </div>
+                        <div class="form-group" fxLayout="column">
+                            <button style="margin-top: 20px"mat-raised-button color="primary" (click)="checkValidUser()">Login</button> 
+                        </div>
+                        
+                    </div>
+            </mat-card>
+                
+                
+                
+                
+                
+        </div>
+    </form>
+           
